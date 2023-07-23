@@ -21,9 +21,6 @@ router = APIRouter(
 async def get_all_submenus(
     menu_id: str, service: SubMenuCache = Depends(submenu_service)
 ) -> list[SubMenuOut]:
-    """
-    Получение списка всех подменю для конкретного меню
-    """
     return await service.get_submenu_list(menu_id)
 
 
@@ -50,12 +47,6 @@ async def create_new_submenu(
     submenu: SubMenuCreate,
     service: SubMenuCache = Depends(submenu_service),
 ) -> SubMenuOut:
-    """
-    Создание подменю:
-
-    - **title**: название (должно быть уникальным)
-    - **description**: описание (опционально)
-    """
     return await service.create_submenu(menu_id, submenu)
 
 
@@ -70,12 +61,6 @@ async def to_update_submenu(
     obj_in: SubMenuUpdate,
     service: SubMenuCache = Depends(submenu_service),
 ) -> SubMenuOut:
-    """
-    Обновление подменю:
-
-    - **title**: обновленное название (должно быть уникальным)
-    - **description**: обновленное описание (опционально)
-    """
     return await service.update_submenu(submenu_id, obj_in)
 
 

@@ -1,12 +1,5 @@
 # Menu REST API
 
-Stack:
-
-```FastAPI```
-```PostgreSQL```
-```Docker```
-```Redis```
-
 This is an asynchronous application for managing a restaurant menu. It includes three entities: Menu, Submenu, and Dish.
 
 Dependencies:
