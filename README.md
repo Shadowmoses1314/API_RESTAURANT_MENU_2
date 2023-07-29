@@ -17,4 +17,10 @@ docker compose -f "docker-compose.yml" up -d --build
 docker compose -f "docker-compose.tests.yml" up -d --build 
 ```
 
+#### Output test results to the console
+```
+docker logs test_app
+```
+
+
 The API documentation is available at ```http://127.0.0.1:8000/docs```
