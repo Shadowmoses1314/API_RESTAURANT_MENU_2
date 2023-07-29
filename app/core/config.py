@@ -17,8 +17,12 @@ DB_USER = os.getenv("POSTGRES_USER")
 DB_PASSWORD = os.getenv("POSTGRES_PASSWORD")
 
 DATABASE_URL = (
-    f"postgresql+asyncpg://{DB_USER}:{DB_PASSWORD}" f"@{DB_HOST}:5432/{DB_NAME}"
+    f"postgresql+asyncpg://{DB_USER}:{DB_PASSWORD}"
+    f"@{DB_HOST}:5432/{DB_NAME}"
 )
+
+TEST_DATABASE_URL = os.getenv("TEST_DATABASE_URL")
+TEST_ASYNC_DATABASE_URL = os.getenv("TEST_ASYNC_DATABASE_URL")
 
 
 class Settings(BaseSettings):

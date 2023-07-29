@@ -67,3 +67,6 @@ wcwidth==0.2.6
 whatthepatch==1.0.4
 aiofiles>=0.6.0
 aioredis==2.0.1
+pytest
+pytest-asyncio
+aiosqlite
