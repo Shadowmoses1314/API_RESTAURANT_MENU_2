@@ -8,9 +8,9 @@ from app.models.utils import generate_uuid
 
 class SubMenu(BaseModel):
     id = Column(String, primary_key=True, default=generate_uuid)
-    parent_id = Column(String, ForeignKey("menu.id"))
-    dishes = relationship("Dish", cascade="delete",
-                          backref="submenu", lazy="selectin")
+    parent_id = Column(String, ForeignKey('menu.id'))
+    dishes = relationship('Dish', cascade='delete',
+                          backref='submenu', lazy='selectin')
     dishes_count = column_property(
         select(
             func.count(

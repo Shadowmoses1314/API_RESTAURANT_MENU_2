@@ -37,7 +37,7 @@ async def init_db():
         await conn.run_sync(Base.metadata.drop_all)
 
 
-@pytest.fixture(scope="session")
+@pytest.fixture(scope='session')
 def event_loop(request) -> Generator:
     loop = asyncio.get_event_loop_policy().new_event_loop()
     yield loop
@@ -47,7 +47,7 @@ def event_loop(request) -> Generator:
 @pytest_asyncio.fixture
 async def async_client() -> AsyncClient:
     app.dependency_overrides[get_async_session] = override_db
-    async with AsyncClient(app=app, base_url="http://test") as client:
+    async with AsyncClient(app=app, base_url='http://test') as client:
         yield client
 
 

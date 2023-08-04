@@ -11,9 +11,9 @@ class SubMenuCreate(SubMenuBase):
 
     class Config:
         schema_extra = {
-            "example": {
-                "title": "My submenu 1",
-                "description": "My submenu description 1",
+            'example': {
+                'title': 'My submenu 1',
+                'description': 'My submenu description 1',
             },
         }
 
@@ -21,9 +21,9 @@ class SubMenuCreate(SubMenuBase):
 class SubMenuUpdate(SubMenuBase):
     class Config:
         schema_extra = {
-            "example": {
-                "title": "My updated submenu 1",
-                "description": "My updated submenu description 1",
+            'example': {
+                'title': 'My updated submenu 1',
+                'description': 'My updated submenu description 1',
             },
         }
 

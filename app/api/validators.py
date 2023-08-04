@@ -1,4 +1,5 @@
 from http import HTTPStatus
+
 from fastapi import HTTPException
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -25,7 +26,7 @@ class BaseValidation:
         if obj is None:
             raise HTTPException(
                 status_code=HTTPStatus.NOT_FOUND,
-                detail=f"{self.model_name} not found",
+                detail=f'{self.model_name} not found',
             )
         return obj
 
@@ -43,7 +44,7 @@ class BaseValidation:
         if obj_id is not None:
             raise HTTPException(
                 status_code=HTTPStatus.UNPROCESSABLE_ENTITY,
-                detail=f"{self.model_name} с таким именем уже существует!",
+                detail=f'{self.model_name} с таким именем уже существует!',
             )
         return obj_id
 

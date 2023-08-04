@@ -10,11 +10,11 @@ Caching is implemented using Redis as the caching storage.
 
 #### How to Run the Application
 ```
-docker compose -f "docker-compose.yml" up -d --build 
+docker compose -f "docker-compose.yml" up -d --build
 ```
 #### How to Run the Tests
 ```
-docker compose -f "docker-compose.tests.yml" up -d --build 
+docker compose -f "docker-compose.tests.yml" up -d --build
 ```
 
 #### Output test results to the console

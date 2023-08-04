@@ -12,7 +12,7 @@ class Menu(BaseModel):
 
     # Declare the relationships as usual
     submenus = relationship(
-        "SubMenu", cascade="delete", backref="menu", lazy="selectin"
+        'SubMenu', cascade='delete', backref='menu', lazy='selectin'
     )
 
     # Declare the column properties using SQLAlchemy annotations

@@ -7,16 +7,16 @@ from app.schemas.menu import MenuCreate, MenuOut, MenuUpdate
 from app.schemas.status import StatusMessage
 
 router = APIRouter(
-    prefix="/menus",
-    tags=["Menus"],
+    prefix='/menus',
+    tags=['Menus'],
 )
 
 
 @router.post(
-    "/",
+    '/',
     response_model=MenuOut,
     status_code=HTTPStatus.CREATED,
-    summary="Создание меню",
+    summary='Создание меню',
 )
 async def create_new_menu(
     menu: MenuCreate, service: MenuCache = Depends(menu_service)
@@ -25,10 +25,10 @@ async def create_new_menu(
 
 
 @router.get(
-    "/{menu_id}",
+    '/{menu_id}',
     response_model=MenuOut,
     status_code=HTTPStatus.OK,
-    summary="Просмотр меню по id",
+    summary='Просмотр меню по id',
 )
 async def get_one_menu(
     menu_id: str, service: MenuCache = Depends(menu_service)
@@ -37,10 +37,10 @@ async def get_one_menu(
 
 
 @router.get(
-    "/",
+    '/',
     response_model=list[MenuOut],
     status_code=HTTPStatus.OK,
-    summary="Просмотр списка всех меню",
+    summary='Просмотр списка всех меню',
 )
 async def get_all_menus(service: MenuCache = Depends(menu_service)
                         ) -> list[MenuOut]:
@@ -48,10 +48,10 @@ async def get_all_menus(service: MenuCache = Depends(menu_service)
 
 
 @router.patch(
-    "/{menu_id}",
+    '/{menu_id}',
     response_model=MenuOut,
     status_code=HTTPStatus.OK,
-    summary="Обновление меню",
+    summary='Обновление меню',
 )
 async def to_update_menu(
     menu_id: str, obj_in: MenuUpdate,
@@ -61,10 +61,10 @@ async def to_update_menu(
 
 
 @router.delete(
-    "/{menu_id}",
+    '/{menu_id}',
     response_model=StatusMessage,
     status_code=HTTPStatus.OK,
-    summary="Удаление меню по id",
+    summary='Удаление меню по id',
 )
 async def to_delete_menu(
     menu_id: str, service: MenuCache = Depends(menu_service)
