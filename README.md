@@ -1,5 +1,4 @@
-![pre-commit workflow](https://github.com/Shadowmoses1314/API_RESTAURANT_MENU_2/actions/workflows/pre-commit.yml/badge.svg)
-# Menu REST API
+# Menu REST API ![pre-commit workflow](https://github.com/Shadowmoses1314/API_RESTAURANT_MENU_2/actions/workflows/pre-commit.yml/badge.svg)
 
 This is an asynchronous application for managing a restaurant menu. It includes three entities: Menu, Submenu, and Dish.
 
